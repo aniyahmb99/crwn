@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.2",
+    "@fortawesome/free-solid-svg-icons": "^6.1.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "fontawesome": "^5.6.3",
+    "react": "^18.2.0"
+  },
+  "name": "starbucks",
+  "version": "1.0.0",
+  "description": "Starbucks Clone App",
+  "main": "App.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/aniyahmb99/starbucks.git"
+  },
+  "author": "Aniyah Butler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aniyahmb99/starbucks/issues"
+  },
+  "homepage": "https://github.com/aniyahmb99/starbucks#readme"
+}

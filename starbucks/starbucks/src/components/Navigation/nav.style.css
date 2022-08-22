@@ -1,0 +1,39 @@
+body {
+  font-family: 'Varela Round', sans-serif;
+  margin: 0;
+}
+
+.container-nav {
+  width: auto;
+  margin: 10px;
+  height: 100%;
+  display: inline-block;
+  color: green;
+  display: flex;
+  position: relative;
+  border-bottom: solid lightgrey 1px;
+}
+.logo {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 5px;
+  padding-bottom: 10px;
+}
+
+.navigation-container {
+  width: auto;
+  height: auto;
+  text-decoration: none;
+
+  position: relative;
+  display: inline-flex;
+  justify-content: space-around;
+}
+
+.nav-list {
+  display: inline-flex;
+  position: relative;
+  margin: 10px;
+  text-decoration: none;
+  color: rgb(6, 29, 6);
+}
