@@ -1,12 +1,10 @@
 import { createContext, useState, useEffect } from 'react';
-import CartItem from '../components/cart-item/cart-item.component';
 
 const addCartItem = (cartItems, productToAdd) => {
-  // find if cart contains productstoadd
   const existingCartItem = cartItems.find(
     (cartItem) => cartItem.id === productToAdd.id
   );
-  // if found, increment quantity
+
   if (existingCartItem) {
     return cartItems.map((cartItem) =>
       cartItem.id === productToAdd.id
@@ -14,20 +12,20 @@ const addCartItem = (cartItems, productToAdd) => {
         : cartItem
     );
   }
-  // return new array with modified cartItems/new cart item
 
   return [...cartItems, { ...productToAdd, quantity: 1 }];
 };
 
 const removeCartItem = (cartItems, cartItemToRemove) => {
-  //find cart item to remove (already exists)
+  // find the cart item to remove
   const existingCartItem = cartItems.find(
     (cartItem) => cartItem.id === cartItemToRemove.id
   );
 
-  //check if quantity is equal to 1, if it is remove that item from the cart
-  if (existingCartItem.quantity === 1)
+  // check if quantity is equal to 1, if it is remove that item from the cart
+  if (existingCartItem.quantity === 1) {
     return cartItems.filter((cartItem) => cartItem.id !== cartItemToRemove.id);
+  }
 
   // return back cartitems with matching cart item with reduced quantity
   return cartItems.map((cartItem) =>
@@ -47,6 +45,7 @@ export const CartContext = createContext({
   addItemToCart: () => {},
   removeItemFromCart: () => {},
   clearItemFromCart: () => {},
+  cartCount: 0,
   cartTotal: 0,
 });
 
@@ -76,7 +75,7 @@ export const CartProvider = ({ children }) => {
     setCartItems(addCartItem(cartItems, productToAdd));
   };
 
-  const removeItemFromCart = (cartItemToRemove) => {
+  const removeItemToCart = (cartItemToRemove) => {
     setCartItems(removeCartItem(cartItems, cartItemToRemove));
   };
 
@@ -88,7 +87,7 @@ export const CartProvider = ({ children }) => {
     isCartOpen,
     setIsCartOpen,
     addItemToCart,
-    removeItemFromCart,
+    removeItemToCart,
     clearItemFromCart,
     cartItems,
     cartCount,
