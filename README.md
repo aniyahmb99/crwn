@@ -1,5 +1,10 @@
 # CRWN 
 
+## Screenshots
+
+Home Page
+![image](https://user-images.githubusercontent.com/96402809/195169262-41ef9e76-dbcd-4fd9-9e62-a87e86d6c92d.png)
+
 ## DESCRIPTION
 This is a clothing brand website for the user to browse and shop and checkout items.
 
@@ -28,12 +33,6 @@ Users can sign in on the site or through their Gmail logins
 
 ## Technologies
 HTML, SASS, REACT.JS
-
-
-## Screenshots
-
-Home Page
-![image]()
 
 ## Contributors
 Aniyah Butler
